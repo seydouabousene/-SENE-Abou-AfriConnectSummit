@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnect Summit </title>
     <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
@@ -43,6 +43,187 @@
             </div>
         </nav>
     </header>
+    <!-- debut du section liste des coach ---------------------------------------------------------------- -->
+    <section id="heropro">
+        <div class="container">
+            <!-- pour dire j'ai quittée acceuil pour programme --------------------------------------------------------- -->
+            <div class="transi">
+                <a href="index.html">Acceuil</a>
+                <span class="supe">></span>
+                <span class="progra">Interveants</span>
+            </div>
+            <!-- le titre un slogan ------------------------------------------------------------------------------------ -->
+            <h1>Neuf voix, quatre expertises, un même élan.</h1>
+            <p>
+                Découvrez les intervenants qui prendront la parole lors du sommet, <br> et filtrez par domaine
+                d'expertise.
+            </p>
+        </div>
+    </section>
+    <section id="lescoach">
+        <!-- le div principale --------------------------------------------------------------------------- -->
+        <div class="container">
+            <!-- titre ------------------------------------------------------------------------------------- -->
+            <div class="chiffre">Tous les intervenants</div>
+            <h2 class="titrechif">Filtrez par thématique.</h2>
+            <!-- les boutons pour la filtre ------------------------------------------------------------ -->
+            <div class="filters" id="filtre">
+                <!-- tous  -------------------------------------------------------------------------------- -->
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <!-- IA & TCH -------------------------------------------------------------------------------- -->
+                <button class="filter-btn" data-filter="ia-tech">IA &amp; Tech</button>
+                <!-- Bussiness -------------------------------------------------------------------------------- -->
+                <button class="filter-btn" data-filter="business">Business</button>
+                <!-- Design -------------------------------------------------------------------------------- -->
+                <button class="filter-btn" data-filter="design">Design</button>
+                <!-- Data -------------------------------------------------------------------------------- -->
+                <button class="filter-btn" data-filter="data">Data</button>
+            </div>
+            <!-- les grid -------------------------------------------------------------------------------- -->
+            <div class="coach-grid" id="coachGrid">
+                <!-- carte -------------------------------------------------------------------------------- -->
+                <div class="coachcard reveal" data-category="business">
+                    <!-- photo -------------------------------------------------------------------------------- -->
+                    <div class="coachphoto">
+                        <img src="" alt="">
+                        <span class="coach-tag">Business</span>AN
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>Khady Mbaye</h3>
+                        <div class="role">Fondatrice, PayFlow Africa</div>
+                        <div class="pays">Senegal</div>
+                    </div>
+                </div>
+                <!-- card -------------------------------------------------------------------------------- -->
+                <div class="coachcard reveal" data-category="business">
+                    <!-- photo -------------------------------------------------------------------------------- -->
+                    <div class="coachphoto">
+                        <img src="" alt="">
+                        <span class="coach-tag">Business</span>KM
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>Aladjie Guirgui</h3>
+                        <div class="role">Directeur, Sahel Ventures</div>
+                        <div class="pays">Ghana</div>
+                    </div>
+                </div>
+                <!-- card -------------------------------------------------------------------------------- -->
+                <div class="coachcard reveal" data-category="ia-tech">
+                    <!-- photo -------------------------------------------------------------------------------- -->
+                    <div class="coachphoto">
+                        <img src="" alt="">
+                        <span class="coach-tag">IA &amp; Tech</span>TA
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>Samina Aidara</h3>
+                        <div class="role">CEO, GreenGrid Energy</div>
+                        <div class="pays">Senegal</div>
+                    </div>
+                </div>
+                <!-- card -------------------------------------------------------------------------------- -->
+                <div class="coachcard reveal" data-category="business">
+                    <div class="coachphoto">
+                        <!-- photo -------------------------------------------------------------------------------- -->
+                        <img src="" alt="">
+                        <span class="coach-tag">Business</span>IB
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>Ibrahim Boireau</h3>
+                        <div class="role">Ministre délégué au Numérique</div>
+                        <div class="pays">Côte d'Ivoire</div>
+                    </div>
+                </div>
+                <!-- card -------------------------------------------------------------------------------- -->
+                <div class="coachcard reveal" data-category="ia-tech">
+                    <div class="coachphoto">
+                        <!-- photo -------------------------------------------------------------------------------- -->
+                        <img src="" alt="">
+                        <span class="coach-tag">IA &amp; Tech</span>ZM
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>Zainab Moyo</h3>
+                        <div class="role">CTO, NileTech AI Lab</div>
+                        <div class="pays">Kenya</div>
+                    </div>
+                </div>
+                <!-- card -------------------------------------------------------------------------------- -->
+                <div class="coachcard reveal" data-category="data">
+                    <div class="coachphoto">
+                        <!-- photo -------------------------------------------------------------------------------- -->
+                        <img src="" alt="">
+                        <span class="coach-tag">Data</span>OD
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>Kadiatou Diallo</h3>
+                        <div class="role">Chef de la donnée, Zima Cloud</div>
+                        <div class="pays">Sénégal</div>
+                    </div>
+                </div>
+                <!-- card -------------------------------------------------------------------------------- -->
+                <div class="coachcard reveal" data-category="design">
+                    <div class="coachphoto">
+                        <!-- photo -------------------------------------------------------------------------------- -->
+                        <img src="" alt="">
+                        <span class="coach-tag">Design</span>FH
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>Fatou Ndiaye</h3>
+                        <div class="role">Directrice création, Kente Media</div>
+                        <div class="pays">Éthiopie</div>
+                    </div>
+                </div>
+                <!-- card -------------------------------------------------------------------------------- -->
+                <div class="coachcard reveal" data-category="data">
+                    <div class="coachphoto">
+                        <!-- photo -------------------------------------------------------------------------------- -->
+                        <img src="" alt="">
+                        <span class="coach-tag">Data</span>NK
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>Njeri Kamau</h3>
+                        <div class="role">Chercheuse data, Savanna Logistics</div>
+                        <div class="pays">Rwanda</div>
+                    </div>
+                </div>
+                <!-- card -------------------------------------------------------------------------------- -->
+                <div class="coachcard reveal" data-category="design">
+                    <div class="coachphoto">
+                        <!-- photo -------------------------------------------------------------------------------- -->
+                        <img src="" alt="">
+                        <span class="coach-tag">Design</span>YT
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>Yaw Tetteh</h3>
+                        <div class="role">Lead produit, Delta Coworking</div>
+                        <div class="pays"> Ghana</div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="empty-state" id="emptyState">Aucun intervenant ne correspond à ce filtre pour le moment.</p>
+        </div>
+    </section>
+    <!-- fin du section lescoach -------------------------------------------------------------------------------- -->
+    <!-- place au footer --------------------------------------------------------------------------------------- -->
+    <footer>
+        <div class="container">
+            <div class="fotbas">
+                <span>&copy <span id="an"></span> AfriConnect Summit. Tous droits réservés. — <a
+                        href="index.html">Retour
+                        à l'accueil</a></span>
+                <button id="backToTop" title="Retour en haut">↑</button>
+            </div>
+        </div>
+    </footer>
 
 
 

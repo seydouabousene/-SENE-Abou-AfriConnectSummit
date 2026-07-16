@@ -6,43 +6,330 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnect Summit </title>
     <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
-    <!-- L'ENTETE DU SITE LES LIEN ET TOUT ---------------------------------------------------   -->
+    <!-- L'ENTETE DU SITE LES LIENS ET TOUT ------------------------------------------------------------------------------------------------ -->
     <header id="navbar0">
         <nav class="navbar1">
-            <!-- mon propre logo --------------------------------------------------------------- -->
+            <!-- mon propre logo ----------------------------------------------------------------------------------------------------------- -->
             <div class="logo">
                 <img class="afrique1" src="images/afrique1.png" alt="iconeafrique"> <br>
                 <span class="Afri">Afri</span> <br>
                 <span class="Connect">Connect</span> <br>
                 <span class="Summit">Summit</span>
             </div>
-            <!-- bouton pour le menu hamburger visible sur mobile ------------------------------ -->
+            <!-- bouton pour le menu hamburger visible sur mobile -------------------------------------------------------------------------- -->
             <button class="burger" onclick="this.classList.toggle('open')">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <!-- les lien qui mene vers les autres pages---------------------------------------- -->
+            <!-- les lien qui mene vers les autres pages------------------------------------------------------------------------------------ -->
             <div class="link">
+                <!-- la liste pour les lien ------------------------------------------------------------------------------------------------ -->
                 <ul class="navlink">
+                    <!-- l'Acceuil --------------------------------------------------------------------------------------------------------- -->
                     <li class="navlien lien"> <a href="index.html"> Accueil </a></li>
-                    <li class="navlien lien"> <a href="intervenants.html"> Intervenants </a></li>
+                    <!-- les Intervenants -------------------------------------------------------------------------------------------------- -->
                     <li class="navlien lien"> <a href="programme.html"> Programmes </a></li>
+                    <!-- Les Programmes ---------------------------------------------------------------------------------------------------- -->
+                    <li class="navlien lien"> <a href="intervenants.html"> Intervenants </a></li>
+                    <!-- le Contact -------------------------------------------------------------------------------------------------------- -->
                     <li class="navlien lien"> <a href="contact.html"> Contact </a></li>
                 </ul>
             </div>
-            <!-- le dark mode ------------------------------------------------------------------ -->
+            <!-- le dark mode -------------------------------------------------------------------------------------------------------------- -->
             <div class="mode">
-                <!-- le bouton dark mode-------------------------------------------------------- -->
+                <!-- le bouton dark mode---------------------------------------------------------------------------------------------------- -->
                 <button id="darkmode " title="Dark / Light mode">🌙</button>
             </div>
         </nav>
+        <!-- la fermeture du header -------------------------------------------------------------------------------------------------------- -->
     </header>
+    <!-- hero interne ---------------------------------------------------------------------------------------------------------------------- -->
+    <section id="hero">
+        <!-- pour dire j'ai quittée acceuil pour programme --------------------------------------------------------------------------------- -->
+        <div class="container">
+            <div class="transi">
+                <a href="index.html">Acceuil</a>
+                <span class="supe">></span>
+                <span class="progra">Programmes</span>
+            </div>
+            <!-- le titre un slogan -------------------------------------------------------------------------------------------------------- -->
+            <h1>Trois jours, un seul fil conducteur <br> : bâtir ensemble. </h1>
+            <p>Du 12 au 14 mars 2026 à Kigali — consultez le détail de chaque journée, <br> session par session.</p>
+        </div>
+    </section>
+    <!-- fin du section hero interne ------------------------------------------------------------------------------------------------------- -->
+    <!-- debut du section onglets ---------------------------------------------------------------------------------------------------------- -->
+    <section id="onglets">
+        <!-- le div principale ------------------------------------------------------------------------------------------------------------- -->
+        <div class="container">
+            <!-- le planning --------------------------------------------------------------------------------------------------------------- -->
+            <div class="chiffre">Planning</div>
+            <!-- le choix ------------------------------------------------------------------------------------------------------------------ -->
+            <h2 class="titrechif">Choisisez votre journée.</h2>
+            <div class="tabs" role="tablist" aria-label="Jours de la conférence">
+                <!-- Bouton tableau un ----------------------------------------------------------------------------------------------------- -->
+                <button class="tab-btn active">Jour1<span class="tab-date"> 12 mars</span> </button>
+                <!-- Bouton tableau deux --------------------------------------------------------------------------------------------------- -->
+                <button class="tab-btn">Jour2<span class="tab-date"> 13 mars</span> </button>
+                <!-- outon tableau trois---------------------------------------------------------------------------------------------------- -->
+                <button class="tab-btn">Jour3<span class="tab-date"> 14 mars</span> </button>
+            </div>
+            <!-- le tableau un ------------------------------------------------------------------------------------------------------------- -->
+            <div class="tab-panel active" id="jour1">
+                <!-- le tableau au scroll--------------------------------------------------------------------------------------------------- -->
+                <div class="schedule-scro">
+                    <table class="schedule">
+                        <!-- Le planning --------------------------------------------------------------------------------------------------- -->
+                        <thead>
+                            <tr>
+                                <th>Heure</th>
+                                <th>Session</th>
+                                <th>Intervenant</th>
+                                <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!-- la premiere heure ------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">08:30</td>
+                                <td class="sched-session">Accueil &amp; enregistrement</td>
+                                <td>Équipe AfriConnect</td>
+                                <td class="sched-room">Grand Theatre</td>
+                            </tr>
+                            <tr>
+                                <!-- le deuxieme heure ------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">09:15</td>
+                                <td class="sched-session">Discours d'ouverture — L'Afrique qui se connecte</td>
+                                <td>Ibrahim Bakayoko</td>
+                                <td class="sched-room">Saly Hotel</td>
+                            </tr>
+                            <tr>
+                                <!-- ------------------------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">10:30</td>
+                                <td class="sched-session">Le capital panafricain en 2026</td>
+                                <td>Kwame Mensah</td>
+                                <td class="sched-room">Salle Baobab</td>
+                            </tr>
+                            <tr>
+                                <!-- ------------------------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">12:00</td>
+                                <td class="sched-session">Déjeuner réseautage</td>
+                                <td>—</td>
+                                <td class="sched-room">Terrasse Est</td>
+                            </tr>
+                            <tr>
+                                <!-- ------------------------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">14:00</td>
+                                <td class="sched-session">Fintech &amp; inclusion financière</td>
+                                <td>Amara Nwosu</td>
+                                <td class="sched-room">Auditorium A</td>
+                            </tr>
+                            <tr>
+                                <!-- ------------------------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">15:30</td>
+                                <td class="sched-session">Atelier : structurer sa levée de fonds</td>
+                                <td>Sahel Ventures</td>
+                                <td class="sched-room">Salle Terou Bi</td>
+                            </tr>
+                            <tr>
+                                <!-- ------------------------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">17:00</td>
+                                <td class="sched-session">Cocktail d'ouverture</td>
+                                <td>—</td>
+                                <td class="sched-room">Jardin Yoff</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-panel" id="jour2">
+                <div class="schedule-scro">
+                    <table class="schedule">
+                        <thead>
+                            <tr>
+                                <!-- le programme ------------------------------------------------------------------------------------------ -->
+                                <th>Heure</th>
+                                <th>Session</th>
+                                <th>Intervenant</th>
+                                <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!-- first ------------------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">09:00</td>
+                                <td class="sched-session">Énergie propre à l'échelle du continent</td>
+                                <td>Thandiwe Adeyemi</td>
+                                <td class="sched-room">Grand Theatre</td>
+                            </tr>
+                            <tr>
+                                <!-- second ------------------------------------------------------------------------------------------------ -->
+                                <td class="sched-temp">10:30</td>
+                                <td class="sched-session">Table ronde : logistique &amp; commerce intra-africain</td>
+                                <td>Panel Savanna Logistics</td>
+                                <td class="sched-room">Salle Baobab</td>
+                            </tr>
+                            <tr>
+                                <!-- third-------------------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">12:00</td>
+                                <td class="sched-session">Déjeuner réseautage</td>
+                                <td>—</td>
+                                <td class="sched-room">Terrasse Est</td>
+                            </tr>
+                            <tr>
+                                <!-- fourth ------------------------------------------------------------------------------------------------ -->
+                                <td class="sched-temp">13:30</td>
+                                <td class="sched-session">Sessions de mise en relation investisseurs</td>
+                                <td>Baobab Capital</td>
+                                <td class="sched-room">Salle Almadies</td>
+                            </tr>
+                            <tr>
+                                <!-- cinquieme---------------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">15:00</td>
+                                <td class="sched-session">IA appliquée à l'agriculture</td>
+                                <td>NileTech</td>
+                                <td class="sched-room">Auditorium B</td>
+                            </tr>
+                            <tr>
+                                <!-- six---------------------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">16:30</td>
+                                <td class="sched-session">Atelier : gouvernance et scalabilité</td>
+                                <td>Continental Bank</td>
+                                <td class="sched-room">Salle Des Mamelles</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- jour 3--------------------------------------------------------------------------------------------------------------------- -->
+            <div class="tab-panel" id="jour3">
+                <div class="schedule-scro">
+                    <table class="schedule">
+                        <thead>
+                            <tr>
+                                <!-- le programme ------------------------------------------------------------------------------------------ -->
+                                <th>Heure</th>
+                                <th>Heure</th>
+                                <th>Session</th>
+                                <th>Intervenant</th>
+                                <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!-- first ------------------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">09:00</td>
+                                <td class="sched-session">Politiques publiques et numérique</td>
+                                <td>Ibrahim Bakayoko</td>
+                                <td class="sched-room">Auditorium A</td>
+                            </tr>
+                            <tr>
+                                <!-- second ------------------------------------------------------------------------------------------------ -->
+                                <td class="sched-temp">10:30</td>
+                                <td class="sched-session">Étude de cas : scaler une fintech en 5 ans</td>
+                                <td>Amara Nwosu</td>
+                                <td class="sched-room">Salle Baobab</td>
+                            </tr>
+                            <tr>
+                                <!-- third-------------------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">12:00</td>
+                                <td class="sched-session">Déjeuner réseautage</td>
+                                <td>—</td>
+                                <td class="sched-room">Terrasse Est</td>
+                            </tr>
+                            <tr>
+                                <!-- fourth ------------------------------------------------------------------------------------------------ -->
+                                <td class="sched-temp">13:30</td>
+                                <td class="sched-session">Talent et formation : combler l'écart de compétences</td>
+                                <td>Kente Media</td>
+                                <td class="sched-room">Auditorium B</td>
+                            </tr>
+                            <tr>
+                                <!-- six---------------------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">15:00</td>
+                                <td class="sched-session">Clôture et remise des prix AfriConnect</td>
+                                <td>Comité du sommet</td>
+                                <td class="sched-room">Auditorium A</td>
+                            </tr>
+                            <tr>
+                                <!-- sept--------------------------------------------------------------------------------------------------- -->
+                                <td class="sched-temp">16:00</td>
+                                <td class="sched-session">Cocktail de clôture</td>
+                                <td>—</td>
+                                <td class="sched-room">Jardin Damel</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fin du section onglets ------------------------------------------------------------------------------------------------------------ -->
+    <!-- debut du section theme------------------------------------------------------------------------------------------------------------- -->
+    <section id="themes">
+        <div class="container">
+            <div class="chiffre">Thématiques</div>
+            <h2 class="titrechif">Quatre axes qui traversent les trois jours.</h2>
+            <div class="themes-grid">
+                <!-- l'argent -------------------------------------------------------------------------------------------------------------- -->
+                <div class="theme-card reveal">
+                    <div class="theme-icon">💳</div>
+                    <h3>Fintech &amp; inclusion</h3>
+                    <p>
+                        Comment les paiements mobiles et le crédit numérique <br>
+                        élargissent l'accès aux services financiers
+                        sur le continent.
+                    </p>
+                </div>
+                <!-- energie --------------------------------------------------------------------------------------------------------------- -->
+                <div class="theme-card reveal">
+                    <div class="theme-icon">🌱</div>
+                    <h3>Énergie &amp; climat</h3>
+                    <p>
+                        Les modèles de production décentralisée qui électrifient les <br>
+                        zones rurales et industrielles.
+                    </p>
+                </div>
+                <!-- ransports ------------------------------------------------------------------------------------------------------------- -->
+                <div class="theme-card reveal">
+                    <div class="theme-icon">🚚</div>
+                    <h3>Commerce &amp; logistique</h3>
+                    <p>
+                        Lever les obstacles à la libre circulation des biens entre pays <br>
+                        voisins, de la douane au dernier
+                        kilomètre.
+                    </p>
+                </div>
+                <!-- formation ------------------------------------------------------------------------------------------------------------- -->
+                <div class="theme-card reveal">
+                    <div class="theme-icon">🎓</div>
+                    <h3>Talent &amp; formation</h3>
+                    <p>
+                        Préparer une génération de compétences techniques capables <br>
+                        de porter la croissance des dix
+                        prochaines années.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fin du section theme -------------------------------------------------------------------------------------------------------------- -->
+    <footer>
+        <div class="container">
+            <div class="fotbas">
+                <span>&copy <span id="an"></span> AfriConnect Summit. Tous droits réservés. — <a
+                        href="index.html">Retour
+                        à l'accueil</a></span>
+                <button id="backToTop" title="Retour en haut">↑</button>
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -53,9 +340,11 @@
 
 
 
-    <!-- partis js a ne rien ecrire ============================================================  -->
+
+
+    <!-- partis js a ne rien ecrire =======================================================================================================  -->
     <script src="js/main.js">
-        // a ne rien ecrire________________________________________________________________
+        // a ne rien ecrire_____________________________________________________________________________________________________________________
     </script>
 </body>
 

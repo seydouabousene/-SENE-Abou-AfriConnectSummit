@@ -6,56 +6,372 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnect Summit </title>
     <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
-    <!-- L'ENTETE DU SITE LES LIEN ET TOUT ---------------------------------------------------   -->
+    <!-- L'ENTETE DU SITE LES LIENS ET TOUT ------------------------------------------------------------------------ -->
     <header id="navbar0">
         <nav class="navbar1">
-            <!-- mon propre logo --------------------------------------------------------------- -->
+            <!-- mon propre logo ----------------------------------------------------------------------------------- -->
             <div class="logo">
                 <img class="afrique1" src="images/afrique1.png" alt="iconeafrique"> <br>
                 <span class="Afri">Afri</span> <br>
                 <span class="Connect">Connect</span> <br>
                 <span class="Summit">Summit</span>
             </div>
-            <!-- bouton pour le menu hamburger visible sur mobile ------------------------------ -->
+            <!-- bouton pour le menu hamburger visible sur mobile -------------------------------------------------- -->
             <button class="burger" onclick="this.classList.toggle('open')">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <!-- les lien qui mene vers les autres pages---------------------------------------- -->
+            <!-- les lien qui mene vers les autres pages------------------------------------------------------------ -->
             <div class="link">
+                <!-- la liste pour les lien ------------------------------------------------------------------------ -->
                 <ul class="navlink">
+                    <!-- l'Acceuil --------------------------------------------------------------------------------- -->
                     <li class="navlien lien"> <a href="index.html"> Accueil </a></li>
+                    <!-- les Intervenants -------------------------------------------------------------------------- -->
                     <li class="navlien lien"> <a href="intervenants.html"> Intervenants </a></li>
+                    <!-- Les Programmes ---------------------------------------------------------------------------- -->
                     <li class="navlien lien"> <a href="programme.html"> Programmes </a></li>
+                    <!-- le Contact -------------------------------------------------------------------------------- -->
                     <li class="navlien lien"> <a href="contact.html"> Contact </a></li>
                 </ul>
             </div>
-            <!-- le dark mode ------------------------------------------------------------------ -->
+            <!-- le dark mode -------------------------------------------------------------------------------------- -->
             <div class="mode">
-                <!-- le bouton dark mode-------------------------------------------------------- -->
+                <!-- le bouton dark mode---------------------------------------------------------------------------- -->
                 <button id="darkmode " title="Dark / Light mode">🌙</button>
             </div>
         </nav>
+        <!-- la fermeture du header -------------------------------------------------------------------------------- -->
     </header>
+    <!-- Bouton retour en haut ------------------------------------------------------------------------------------- -->
+    <button id="backToTop" title="Retour en haut">↑</button>
+    <!-- La section hero avec un titre accrocheur ------------------------------------------------------------------ -->
+    <section id="hero">
+        <!-- la div principale pour la section hero ---------------------------------------------------------------- -->
+        <div class="container">
+            <!-- la date et l'heure--------------------------------------------------------------------------------- -->
+            <div class="date">
+                <span class="point"></span>
+                "12 – 14 mars 2026 · Kedougou, Senegal"
+            </div>
+            <!-- mon titre h1 -------------------------------------------------------------------------------------- -->
+            <div class="accrocheur">
+                <!-- le Titre principale---------------------------------------------------------------------------- -->
+                <h1 class="sommet">
+                    Le continent se <span class="connect">connecte</span>, <br> le futur
+                    se construit ici.
+                </h1>
+                <!-- sous titre accrocheur ------------------------------------------------------------------------- -->
+                <p class="trois">
+                    Trois jours pour rassembler <strong> bâtisseurs, investisseurs et
+                    </strong> <br> <strong>décideurs</strong> de 12 pays africains autour de l'innovation, du <br>
+                    capital et des idées qui feront l'Afrique de demain.
+                </p>
+            </div>
+            <!-- CTA ----------------------------------------------------------------------------------------------- -->
+            <div class="cta">
+                <!-- lien vers le contact pour reservez ------------------------------------------------------------ -->
+                <a href="contact.html" class="reserve">Reservez vos place</a>
+                <!-- lien vers les intervenants -------------------------------------------------------------------- -->
+                <a href="intervenants.html" class="intervenants">Voir les Intervenants</a>
+            </div>
+            <!-- les coonpt a rebours ------------------------------------------------------------------------------ -->
+            <div class="contrebour">
+                <!-- jours ----------------------------------------------------------------------------------------- -->
+                <div class="jours" id="jours">00</div>
+                <!-- heure ----------------------------------------------------------------------------------------- -->
+                <div class="heure" id="heure">00</div>
+                <!-- minutes --------------------------------------------------------------------------------------- -->
+                <div class="minutes" id="minutes">00</div>
+                <!-- secondes -------------------------------------------------------------------------------------- -->
+                <div class="secondes" id="secondes">00</div>
+            </div>
+        </div>
+    </section>
+    <!-- fin du section hero --------------------------------------------------------------------------------------- -->
+    <!-- debut du section chiffres cles ---------------------------------------------------------------------------- -->
+    <section id="chicles">
+        <!-- le div principale ------------------------------------------------------------------------------------- -->
+        <div class="container container1">
+            <!-- classe en chiffre --------------------------------------------------------------------------------- -->
+            <div class="chiffre">En chiffres</div>
+            <!-- titre des chiffres -------------------------------------------------------------------------------- -->
+            <h2 class="titrechif">Un rendez-vous qui prend de l'empleure chaque <br> année.</h2>
+            <!-- div pour le display grid -------------------------------------------------------------------------- -->
+            <div class="gridchif">
+                <!-- 1200 particiapants ---------------------------------------------------------------------------- -->
+                <div class="chifgrid">
+                    <div id="chi">+1200</div>
+                    <div class="ecrit">Participants</div>
+                </div>
+                <!-- les 48 Interveants ---------------------------------------------------------------------------- -->
+                <div class="chifgrid">
+                    <div id="chi">48</div>
+                    <div class="ecrit">Intervenants</div>
+                </div>
+                <!-- les 3 jours ----------------------------------------------------------------------------------- -->
+                <div class="chifgrid">
+                    <div id="chi">3</div>
+                    <div class="ecrit">jours</div>
+                </div>
+                <!-- les 12 pays ----------------------------------------------------------------------------------- -->
+                <div class="chifgrid">
+                    <div id="chi">12</div>
+                    <div class="ecrit">Pays</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fin du section chicles ------------------------------------------------------------------------------------ -->
+    <!-- Debut du section why particper ---------------------------------------------------------------------------- -->
+    <secction id="whyparticip">
+        <!-- le div princ ------------------------------------------------------------------------------------------ -->
+        <div class="container container2">
+            <!-- POURQUOI PARTICIPER ------------------------------------------------------------------------------- -->
+            <div class="chiffre">POURQUOI PARTICIPER</div>
+            <!-- titre sous ---------------------------------------------------------------------------------------- -->
+            <h2 class="titrechif">Ce avec quoi vous repartez</h2>
+        </div>
+        <!-- les card pour le why ---------------------------------------------------------------------------------- -->
+        <div class="whycard">
+            <!-- le reseaux ---------------------------------------------------------------------------------------- -->
+            <div class="whycarte">
+                <!-- l'icone --------------------------------------------------------------------------------------- -->
+                <div class="whyicon"></div>
+                <!-- le titre -------------------------------------------------------------------------------------- -->
+                <h3>Un Reseaux Continental</h3>
+                <!-- le texte -------------------------------------------------------------------------------------- -->
+                <p>
+                    Rencontrez des fondateurs, <br>
+                    investisseurs et institutions venus de <br>
+                    12 pays, réunis en un seul lieu pendant <br>
+                    trois jours.
+                </p>
+            </div>
+            <div class="whycarte">
+                <!-- l'icone --------------------------------------------------------------------------------------- -->
+                <div class="whyicon"></div>
+                <!-- le titre ------------------------------------------------------------------------------------- -->
+                <h3>Des idées qui se testent</h3>
+                <!-- le texte -------------------------------------------------------------------------------------- -->
+                <p>
+                    Ateliers, études de cas et débats <br>
+                    construits pour être appliqués dès le <br>
+                    lundi suivant, pas seulement discutés.
+                </p>
+            </div>
+            <div class="whycarte">
+                <!-- l'icone --------------------------------------------------------------------------------------- -->
+                <div class="whyicon"></div>
+                <!-- le titre ------------------------------------------------------------------------------------- -->
+                <h3>Un accès direct au capital</h3>
+                <!-- le texte -------------------------------------------------------------------------------------- -->
+                <p>
+                    Des sessions de mise en relation avec <br>
+                    des fonds actifs sur le continent, <br>
+                    pensées pour les porteurs de projets.
+                </p>
+            </div>
+        </div>
+    </secction>
+    <!-- fin du section whyparticip -------------------------------------------------------------------------------- -->
+    <!-- debut du section intervenats vedettes --------------------------------------------------------------------- -->
+    <section id="interdette">
+        <!-- le div princ------------------------------------------------------------------------------------------- -->
+        <div class="container">
+            <!-- le titre ------------------------------------------------------------------------------------------ -->
+            <div class="chiffre">Interveants vedettes</div>
+            <!-- le sous titre-------------------------------------------------------------------------------------- -->
+            <h2 class="titrechif">Des vois qui façonnent l'Afrique.</h2>
+            <!-- les coach ----------------------------------------------------------------------------------------- -->
+            <div class="coachgrid">
+                <!-- les carte des coach --------------------------------------------------------------------------- -->
+                <div class="coachcard">
+                    <!-- l'image ----------------------------------------------------------------------------------- -->
+                    <div>
+                        <!-- photos du coach ----------------------------------------------------------------------- -->
+                        <img class="coachphotos" src="" alt="">
+                    </div>
+                    <!-- info du coach------------------------------------------------------------------------------ -->
+                    <div class="coachinfo">
+                        <!-- son Nom-------------------------------------------------------------------------------- -->
+                        <h3>Astou fall</h3>
+                        <!-- son role ------------------------------------------------------------------------------ -->
+                        <div class="role">Fondatrice Playflow Africa</div>
+                        <!-- son pays ------------------------------------------------------------------------------ -->
+                        <div class="pays">Congolaise</div>
+                    </div>
+                </div>
+                <div class="coachcard">
+                    <!-- l'image ----------------------------------------------------------------------------------- -->
+                    <div>
+                        <!-- photos du coach ----------------------------------------------------------------------- -->
+                        <img class="coachphotos" src="" alt="">
+                    </div>
+                    <!-- info du coach------------------------------------------------------------------------------ -->
+                    <div class="coachinfo">
+                        <!-- son Nom-------------------------------------------------------------------------------- -->
+                        <h3>Mouhamed Ndiaye</h3>
+                        <!-- son role ------------------------------------------------------------------------------ -->
+                        <div class="role">Directeur, Sahel ventures</div>
+                        <!-- son pays ------------------------------------------------------------------------------ -->
+                        <div class="pays">Senegalais</div>
+                    </div>
+                </div>
+                <div class="coachcard">
+                    <!-- l'image ----------------------------------------------------------------------------------- -->
+                    <div>
+                        <!-- photos du coach ----------------------------------------------------------------------- -->
+                        <img class="coachphotos" src="" alt="">
+                    </div>
+                    <!-- info du coach------------------------------------------------------------------------------ -->
+                    <div class="coachinfo">
+                        <!-- son Nom-------------------------------------------------------------------------------- -->
+                        <h3>Khady Mbaye</h3>
+                        <!-- son role ------------------------------------------------------------------------------ -->
+                        <div class="role">CEO, GreenGrid Energy</div>
+                        <!-- son pays ------------------------------------------------------------------------------ -->
+                        <div class="pays">Senegalaise</div>
+                    </div>
+                </div>
+                <div class="coachcard">
+                    <!-- l'image ----------------------------------------------------------------------------------- -->
+                    <div>
+                        <!-- photos du coach ----------------------------------------------------------------------- -->
+                        <img class="coachphotos" src="" alt="">
+                    </div>
+                    <!-- info du coach------------------------------------------------------------------------------ -->
+                    <div class="coachinfo">
+                        <!-- son Nom-------------------------------------------------------------------------------- -->
+                        <h3>Ass Guirane</h3>
+                        <!-- son role ------------------------------------------------------------------------------ -->
+                        <div class="role">Ministre Delegue au Numerique</div>
+                        <!-- son pays ------------------------------------------------------------------------------ -->
+                        <div class="pays">Ivoirien</div>
+                    </div>
+                </div>
+            </div>
+            <!-- fin des carte coach ------------------------------------------------------------------------------- -->
+            <!-- le cta interdette --------------------------------------------------------------------------------- -->
+            <div class="ctainterdette">
+                <!-- le lien vers les intervenants ----------------------------------------------------------------- -->
+                <a href="intervenants.html">
+                    Voir tous les intervenants
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- fin du section interdettes -------------------------------------------------------------------------------- -->
+    <!-- debut du section sponsors --------------------------------------------------------------------------------- -->
+    <section id="sponsors">
+        <!-- le div princ------------------------------------------------------------------------------------------- -->
+        <div class="container">
+            <!-- le titre ------------------------------------------------------------------------------------------ -->
+            <div class="chiffre">Nos partenaires</div>
+            <!-- le sous titre-------------------------------------------------------------------------------------- -->
+            <h2 class="titrechif">Ils rendent le sommeil plus faicle</h2>
+            <div class="sponor">
+                <!-- le prim --------------------------------------------------------------------------------------- -->
+                <div class="typespon">PARTENAIRES EN OR</div>
+                <div class="sponsor or">SONATEL</div>
+                <div class="sponsor or">SOBOA</div>
+            </div>
+            <div class="sponor">
+                <!-- l'argent -------------------------------------------------------------------------------------- -->
+                <div class="typespon">PARTENAIRES EN ARGENT</div>
+                <div class="sponsor argent">TOTAL SENEGAL</div>
+                <div class="sponsor argent">SENELEC</div>
+                <div class="sponsor argent">ITOC</div>
+                <div class="sponsor argent">SHELL</div>
+                <div class="sponsor argent">SOCOCIM</div>
+                <div class="sponsor argent">OLIBYA</div>
+                <div class="sponsor argent">CDS</div>
+                <div class="sponsor argent">SDE</div>
+                <div class="sponsor argent">ELTON</div>
+            </div>
+            <div class="sponor">
+                <!-- bronze ---------------------------------------------------------------------------------------- -->
+                <div class="sponsor bronze">UBA</div>
+                <div class="sponsor bronze">FINAO</div>
+                <div class="sponsor bronze">LBO</div>
+                <div class="sponsor bronze">CBI</div>
+                <div class="sponsor bronze">BNDE</div>
+            </div>
+        </div>
+    </section>
+    <!-- fin du section -------------------------------------------------------------------------------------------- -->
+    <!-- le footer ------------------------------------------------------------------------------------------------- -->
+    <footer>
+        <!-- le div princ ------------------------------------------------------------------------------------------ -->
+        <div class="container">
+            <div class="footerpri">
+                <div class="fot fotpri">
+                    <!-- n'oublie pas le logo ---------------------------------------------------------------------- -->
+                    <a href="index.html">logo</a>
+                    <p>
+                        Le sommet panafricain qui réunit <br>
+                        chaque année les bâtisseurs du <br>
+                        continent.
+                    </p>
+                    <div class="reseaux">
+                        <!-- L'attribut TARGET="_blank" sert a ouvrir le lien dans une nouvelle onglets ------------ -->
+                        <!-- watsApp ------------------------------------------------------------------------------- -->
+                        <a href="https://wa.me/221771234567" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <!-- Instagramme --------------------------------------------------------------------------- -->
+                        <a href="https://www.instagram.com/ton_compte" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <!-- tik tok ------------------------------------------------------------------------------- -->
+                        <a href="https://www.tiktok.com/@seydouna8" target="_blank">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- la navigation dans le footer ------------------------------------------------------------------ -->
+                <div class="fot">
+                    <h4>Navigation</h4>
+                    <a href="index.html">Acceuil</a>
+                    <a href="intervenants.html">Intervenants</a>
+                    <a href="programme.html">Programmes</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <!-- le contact ------------------------------------------------------------------------------------ -->
+                <div class="fot">
+                    <h4>Contact</h4>
+                    <p>Kedougou, Convention Centre</p>
+                    <p>Kedougou, Senegal</p>
+                    <!-- mailto permet d'ouvrire la messageriede l'utilisateur ------------------------------------- -->
+                    <a href="mailto:seydouabousene@gmail.com">mailto:infoafriconnectsummit.com</a>
+                </div>
+            </div>
+            <!-- footer du bas ------------------------------------------------------------------------------------- -->
+            <div class="fotbas">
+                <!-- l'année compteur ------------------------------------------------------------------------------ -->
+                <span>
+                    &copy; <span id="an">2026</span>
+                    "Africonnect Summit. Tout droit reservés"
+                </span>
+                <!-- Bouton retour en haut ------------------------------------------------------------------------- -->
+                <button id="backToTop" title="Retour en haut">↑</button>
+            </div>
+        </div>
+    </footer>
 
 
 
 
 
-
-
-
-
-
-    <!-- partis js a ne rien ecrire ============================================================  -->
+    <!-- partis js a ne rien ecrire ================================================================================= -->
     <script src="js/main.js">
-        // a ne rien ecrire________________________________________________________________
+        // a ne rien ecrire__________________________________________________________________________________________
     </script>
 </body>
 

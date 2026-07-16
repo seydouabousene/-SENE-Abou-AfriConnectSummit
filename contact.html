@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnect Summit </title>
     <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
-    <!-- L'ENTETE DU SITE LES LIEN ET TOUT ---------------------------------------------------   -->
+    <!-- L'ENTETE DU SITE LES LIEN ET TOUT -----------------------------------------------------   -->
     <header id="navbar0">
         <nav class="navbar1">
             <!-- mon propre logo --------------------------------------------------------------- -->
@@ -43,6 +43,208 @@
             </div>
         </nav>
     </header>
+    <!-- debut du section hero -->
+    <section id="hero">
+        <!-- pour dire j'ai quittée acceuil pour programme --------------------------------------------------------- -->
+        <div class="container">
+            <div class="transi">
+                <a href="index.html">Acceuil</a>
+                <span class="supe">></span>
+                <span class="progra">Contact</span>
+            </div>
+            <!-- le titre un slogan ------------------------------------------------------------------------------------ -->
+            <h1>Réservez votre place au sommet.</h1>
+            <p>Remplissez le formulaire ci-dessous ou contactez directement notre équipe pour toute question.</p>
+        </div>
+    </section>
+    <!-- fin du section hero ------------------------------------------------------------------------------------ -->
+    <!-- debut du section contact ---------------------------------------------------------------------------------- -->
+    <section id="contact">
+        <!-- le div principal --------------------------------------------------------------------------------------------------------- -->
+        <div class="contain">
+            <!-- le titre ------------------------------------------------------------------------------------------------------------- -->
+            <div class="chifre">Inscription</div>
+            <!-- sous titre ----------------------------------------------------------------------------------------------------------- -->
+            <div class="titrechi">Vos informations, en quelques <br> minutes.</div>
+            <!-- la mise en page ------------------------------------------------------------------------------------------------------ -->
+            <div class="contact-page">
+                <!-- div du form princiaple ------------------------------------------------------------------------------------------- -->
+                <div class="form-col">
+                    <!-- la forme ici ------------------------------------------------------------------------------------------------- -->
+                    <form action="" id="registreform">
+                        <!-- sa contenue ---------------------------------------------------------------------------------------------- -->
+                        <div class="champ" id="non-champ">
+                            <!-- le champ nom ----------------------------------------------------------------------------------------- -->
+                            <label for="fullname">Nom complet <span class="required">*</span></label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Ex. Awa Diop">
+                            <div class="field-error">Merci d'indiquer votre nom complet.</div>
+                        </div>
+                        <!-- fin du champ nom ----------------------------------------------------------------------------------------- -->
+                        <!-- debut du champ email ------------------------------------------------------------------------------------- -->
+                        <div class="champ" id="champ-email">
+                            <!-- champ email ------------------------------------------------------------------------------------------ -->
+                            <label for="email">Adresse email <span class="required">*</span></label>
+                            <input type="text" id="email" name="email" placeholder="vous@exemple.com">
+                            <div class="field-error">Merci d'entrer une adresse email valide.</div>
+                        </div>
+                        <!-- fin du champ email --------------------------------------------------------------------------------------- -->
+                        <!-- debut du champ phone ------------------------------------------------------------------------------------- -->
+                        <div class="champ" id="champ-phone">
+                            <!-- champ phone ------------------------------------------------------------------------------------------ -->
+                            <label for="phone">Téléphone <span class="required">*</span></label>
+                            <input type="text" id="phone" name="phone" placeholder="Ex. +221 77 123 45 67">
+                            <div class="field-error">Le numéro doit contenir au moins 8 chiffres.</div>
+                        </div>
+                        <!-- fin du champ phone --------------------------------------------------------------------------------------- -->
+                        <!-- debut du champ type -------------------------------------------------------------------------------------- -->
+                        <div class="champ" id="champ-type">
+                            <!-- champ type ------------------------------------------------------------------------------------------- -->
+                            <label>Type de participation <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <!-- l'option radio permet de choisir une seule foisé ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                                <label class="radio-option"><input type="radio" name="type"
+                                        value="visiteur">Visiteur</label>
+                                <label class="radio-option"><input type="radio" name="type"
+                                        value="intervenant">Intervenant</label>
+                                <label class="radio-option"><input type="radio" name="type"
+                                        value="sponsor">Sponsor</label>
+                                <label class="radio-option"><input type="radio" name="type"
+                                        value="presse">Presse</label>
+                            </div>
+                            <div class="field-error">Merci de choisir un type de participation.</div>
+                        </div>
+                        <!-- fin du champ type ---------------------------------------------------------------------------------------- -->
+                        <!-- debut du champ pays -------------------------------------------------------------------------------------- -->
+                        <div class="champ" id="champ-pays">
+                            <!-- le contenue du champ-pays ---------------------------------------------------------------------------- -->
+                            <label for="country">Pays africain <span class="required">*</span></label>
+                            <select id="country" name="country">
+                                <option value="">— Sélectionnez votre pays —</option>
+                                <option value="senegal">Sénégal</option>
+                                <option value="nigeria">Nigéria</option>
+                                <option value="ghana">Ghana</option>
+                                <option value="kenya">Kenya</option>
+                                <option value="afrique-du-sud">Afrique du Sud</option>
+                                <option value="rwanda">Rwanda</option>
+                                <option value="cote-ivoire">Côte d'Ivoire</option>
+                                <option value="ethiopie">Éthiopie</option>
+                                <option value="maroc">Maroc</option>
+                                <option value="egypte">Égypte</option>
+                                <option value="tunisie">Tunisie</option>
+                                <option value="cameroun">Cameroun</option>
+                                <option value="tanzanie">Tanzanie</option>
+                            </select>
+                            <div class="field-error">Merci de sélectionner votre pays.</div>
+                        </div>
+                        <!-- fin du champ-pays ---------------------------------------------------------------------------------------- -->
+                        <!-- debut du champ-messag ------------------------------------------------------------------------------------ -->
+                        <div class="champ" id="champ-message">
+                            <!-- le contenue ------------------------------------------------------------------------------------------ -->
+                            <label for="message">Message / motivation <span class="required">*</span></label>
+                            <textarea id="message" name="message"
+                                placeholder="Dites-nous en quelques mots pourquoi vous souhaitez participer…"></textarea>
+                            <div class="field-error">Le message doit contenir au moins 20 caractères.</div>
+                        </div>
+                        <!-- fin du champ-message ------------------------------------------------------------------------------------- -->
+                        <!-- le bouton pour envoyer ----------------------------------------------------------------------------------- -->
+                        <button type="submit" class="submit-btn">Envoyer mon inscription →</button>
+                        <!-- affirmation ---------------------------------------------------------------------------------------------- -->
+                        <div class="success-msg" id="successMsg">
+                            ✓ Inscription envoyée avec succès ! Nous revenons vers vous très vite.
+                        </div>
+                    </form>
+                </div>
+                <!-- information du site ---------------------------------------------------------------------------------------------- -->
+                <div class="info-col">
+                    <div class="info-card">
+                        <h3>Coordonnées</h3>
+                        <div class="info-row"><span
+                                class="info-icon">✉</span><span>info@africonnectsummit.example</span></div>
+                        <div class="info-row"><span class="info-icon">☎</span><span>+225 77 127 29 13</span></div>
+                        <div class="info-row"><span class="info-icon">📍</span><span>Kedougou, Convention Centre,
+                                Kedougou,
+                                rue 50, Senegal</span></div>
+                        <div class="info-row"><span class="info-icon">🗓</span><span>12 – 14 mars 2026</span></div>
+                    </div>
+                    <div class="map-frame">
+                        <iframe src="https://www.google.com/maps?q=Kedougou,Senegal&output=embed" width="100%"
+                            height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fin du section contact ------------------------------------------------------------------------------------------------------- -->
+    <!-- debut su section faq --------------------------------------------------------------------------------------------------------- -->
+    <section id="faq">
+        <!-- div principale ----------------------------------------------------------------------------------------------------------- -->
+        <div class="container">
+            <!-- titre ---------------------------------------------------------------------------------------------------------------- -->
+            <div class="chiffre">Question Frequentes</div>
+            <!-- sous titre ----------------------------------------------------------------------------------------------------------- -->
+            <div class="titrechif">Tout ce qu'il faut savoir avant de s'inscrire.</div>
+            <div class="list-faq">
+                <!-- question 1 ----------------------------------------------------------------------------------------------------------- -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq1">
+                    <label for="faq1">Le billet d'entrée inclut-il les trois jours ?<span
+                            class="faq-icon"></span></label>
+                    <div class="faq-question">
+                        <p>Oui, une inscription unique donne accès aux trois journées complètes du sommet, ainsi qu'aux
+                            cocktails d'ouverture et de clôture.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input type="checkbox" id="faq2">
+                <label for="faq2">Puis-je m'inscrire en tant qu'intervenant sans avoir été invité ?<span
+                        class="faq-icon"></span></label>
+                <div class="faq-question">
+                    <p>Oui, choisissez « Intervenant » dans le formulaire et décrivez votre proposition dans le champ
+                        message : notre comité de programmation l'examinera.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input type="checkbox" id="faq3">
+                <label for="faq3">Existe-t-il des tarifs réduits pour les étudiants ?<span
+                        class="faq-icon"></span></label>
+                <div class="faq-question">
+                    <p>Des tarifs préférentiels sont disponibles pour les étudiants et les porteurs de jeunes projets
+                        sur présentation d'un justificatif, contactez-nous directement.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input type="checkbox" id="faq4">
+                <label for="faq4">Le sommet propose-t-il une aide pour le visa ou l'hébergement ?<span
+                        class="faq-icon"></span></label>
+                <div class="faq-question">
+                    <p>Une lettre d'invitation officielle est fournie sur demande pour faciliter les démarches de visa,
+                        ainsi qu'une liste d'hôtels partenaires à tarifs négociés.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <input type="checkbox" id="faq5">
+                <label for="faq5">Puis-je annuler ou transférer mon inscription ?<span class="faq-icon"></span></label>
+                <div class="faq-question">
+                    <p>Les inscriptions sont transférables à une autre personne jusqu'à 7 jours avant l'événement ; les
+                        annulations sont remboursables selon nos conditions générales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fin du section faq ----------------------------------------------------------------------------------------------------------- -->
+    <!-- footer ----------------------------------------------------------------------------------------------------------------------- -->
+    <footer>
+        <div class="container">
+            <div class="fotbas">
+                <span>&copy; <span id="an"></span> AfriConnect Summit. Tous droits réservés. — <a href="index.html">Retour
+                        à l'accueil</a></span>
+                <!-- Bouton retour en haut -------------------------------------------------------------------------------------------- -->
+                <button id="backToTop" title="Retour en haut">↑</button>
+            </div>
+        </div>
+    </footer>
 
 
 
