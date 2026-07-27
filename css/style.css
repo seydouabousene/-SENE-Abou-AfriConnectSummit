@@ -482,12 +482,10 @@ a {
 }
 
 .coachphotos {
-    width: 260px;
-    height: 390px;
+    width: 300px;
+    height: 490px;
     object-fit: cover;
     /* la photo remplit le cadre sans se déformer */
-    background-color: var(--nuit-clair);
-    /* couleur de secours si pas d'image */
     display: block;
 }
 
