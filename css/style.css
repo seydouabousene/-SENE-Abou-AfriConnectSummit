@@ -436,9 +436,9 @@ a {
     border-radius: 50%;
     background-color: var(--nuit-clair);
     margin-bottom: 20px;
-    display: flex;              
-    align-items: center;        
-    justify-content: center;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .whycarte h3 {
@@ -777,7 +777,7 @@ footer {
 /* ---- la zone photo (ici un bloc coloré avec les initiales) ---- */
 .coachphoto {
     position: relative;
-    height: 190px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1313,9 +1313,10 @@ footer {
     transform: translate(-50%, -50%) rotate(90deg);
     opacity: 0;
 }
+
 /* RESPONSIVE -------------------------------------- */
 @media (max-width: 900px) {
- 
+
     /* on cache le menu horizontal... */
     .link {
         display: none;
@@ -1326,92 +1327,92 @@ footer {
         background-color: var(--nuit-carte);
         border-bottom: 1px solid var(--ligne);
     }
- 
+
     /* ...et on montre le bouton hamburger à la place */
     .burger {
         display: flex;
     }
- 
+
     /* Astuce CSS : ".burger.open + .link" veut dire
        "le .link qui suit juste après un .burger qui a la classe open". */
-    .burger.open + .link {
+    .burger.open+.link {
         display: block;
     }
- 
+
     .navlink {
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
         padding: 8px 24px 20px;
     }
- 
+
     .navlien {
         width: 100%;
         border-bottom: 1px solid var(--ligne);
     }
- 
+
     .navlien a {
         display: block;
         padding: 14px 0;
     }
- 
+
     /* stats sur 2 colonnes au lieu de 4 */
     .gridchif {
         grid-template-columns: repeat(2, 1fr);
     }
- 
+
     /* intervenants sur 2 colonnes au lieu de 4 (section homepage) */
     .coachgrid {
         grid-template-columns: repeat(2, 1fr);
     }
- 
+
     /* intervenants sur 2 colonnes au lieu de 3 (page intervenants.html) */
     .coach-grid {
         grid-template-columns: repeat(2, 1fr);
     }
- 
+
     .sommet {
         font-size: 38px;
     }
- 
+
     #heropro h1 {
         font-size: 30px;
     }
- 
+
     /* thématiques (programme.html) : 1 colonne au lieu de 2 */
     .themes-grid {
         grid-template-columns: 1fr;
     }
- 
+
     /* formulaire contact : les 2 colonnes passent l'une sous l'autre */
     .contact-page {
         flex-direction: column;
     }
 }
- 
+
 @media (max-width: 560px) {
- 
+
     /* stats sur 1 colonne */
     .gridchif {
         grid-template-columns: 1fr;
     }
- 
+
     /* intervenants sur 1 colonne (section homepage) */
     .coachgrid {
         grid-template-columns: 1fr;
     }
- 
+
     /* intervenants sur 1 colonne (page intervenants.html) */
     .coach-grid {
         grid-template-columns: 1fr;
     }
- 
-    .contrebour > div {
+
+    .contrebour>div {
         min-width: 60px;
         font-size: 22px;
         padding: 10px 4px;
     }
- 
+
     .footerpri {
         flex-direction: column;
     }

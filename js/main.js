@@ -164,7 +164,7 @@ let panneauxOnglets = document.querySelectorAll('.tab-panel');
 
 boutonsOnglets.forEach((bouton, index) => {
     bouton.addEventListener('click', () => {
-        // étape 1 on retire "active" de tous les boutons...
+        // étape 1 on retire active de tous les boutons...
         boutonsOnglets.forEach((b) => b.classList.remove('active'));
         // puis on le remet seulement sur celui qui vient d'être cliqué
         bouton.classList.add('active');
@@ -178,31 +178,139 @@ boutonsOnglets.forEach((bouton, index) => {
     });
 });
 
-
-/* =====================FILTRE PAR THÉMATIQUE (page intervenants.html)======================== */
+/* ==================FILTRE PAR THÉMATIQUE======================================= */
 let boutonsFiltre = document.querySelectorAll('.filter-btn');
 let cartesIntervenants = document.querySelectorAll('.coachcard');
 let messageVide = document.getElementById('emptyState');
-
+ 
 boutonsFiltre.forEach((bouton) => {
     bouton.addEventListener('click', () => {
-        // étape 1 : mettre en évidence le bouton actif
+        // étape 1  mettre en évidence le bouton actif
         boutonsFiltre.forEach((b) => b.classList.remove('active'));
         bouton.classList.add('active');
-
-        let filtreChoisi = bouton.dataset.filter; // ex : "business" ou "all"
+ 
+        let filtreChoisi = bouton.dataset.filter; // 
         let nombreVisibles = 0;
-
+ 
         // étape 2 : montrer/cacher chaque carte selon sa thématique
         cartesIntervenants.forEach((carte) => {
             let correspond = filtreChoisi === 'all' || carte.dataset.category === filtreChoisi;
             carte.classList.toggle('hidden', !correspond);
             if (correspond) nombreVisibles++;
         });
-
+ 
         // étape 3 : afficher le message si le filtre ne donne aucun résultat
         if (messageVide) {
             messageVide.classList.toggle('show', nombreVisibles === 0);
         }
     });
 });
+
+/* ===================VALIDATION DU FORMULAIRE D'INSCRIPTION=========================== */
+
+let formulaire = document.getElementById('registreform');
+ 
+if (formulaire) {
+    let messageSucces = document.getElementById('successMsg');
+    // regex 
+    let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+ 
+    // compte uniquement les chiffres présents dans le texte (ignore espaces, +, tirets...)
+    function compterChiffres(texte) {
+        return (texte.match(/\d/g) || []).length;
+    }
+ 
+    // affiche l'état valid
+    function definirEtatChamp(idDuChamp, estValide) {
+        let champ = document.getElementById(idDuChamp);
+        if (!champ) return;
+        champ.classList.remove('valid', 'invalid');
+        champ.classList.add(estValide ? 'valid' : 'invalid');
+    }
+ 
+    formulaire.addEventListener('submit', (evenement) => {
+        evenement.preventDefault(); // empêche le rechargement de la page
+        if (messageSucces) messageSucces.classList.remove('show');
+ 
+        let toutEstValide = true;
+ 
+        // --- nom complet ---
+        let nomComplet = document.getElementById('fullname').value.trim();
+        let nomValide = nomComplet.length >= 2;
+        definirEtatChamp('non-champ', nomValide);
+        if (!nomValide) toutEstValide = false;
+ 
+        // --- email ---
+        let email = document.getElementById('email').value.trim();
+        let emailValide = regexEmail.test(email);
+        definirEtatChamp('champ-email', emailValide);
+        if (!emailValide) toutEstValide = false;
+ 
+        // --- téléphone au moins 8 chiffres ---
+        let telephone = document.getElementById('phone').value.trim();
+        let telephoneValide = compterChiffres(telephone) >= 8;
+        definirEtatChamp('champ-phone', telephoneValide);
+        if (!telephoneValide) toutEstValide = false;
+ 
+        // --- type de participation un radio doit être coché ---
+        let typeCoche = formulaire.querySelector('input[name="type"]:checked');
+        let typeValide = !!typeCoche; // !! transforme en true/false
+        definirEtatChamp('champ-type', typeValide);
+        if (!typeValide) toutEstValide = false;
+ 
+        // --- pays une option doit être choisie ---
+        let pays = document.getElementById('country').value;
+        let paysValide = pays !== '';
+        definirEtatChamp('champ-pays', paysValide);
+        if (!paysValide) toutEstValide = false;
+ 
+        // --- message (au moins 20 caractères) ---
+        let message = document.getElementById('message').value.trim();
+        let messageValide = message.length >= 20;
+        definirEtatChamp('champ-message', messageValide);
+        if (!messageValide) toutEstValide = false;
+ 
+        if (toutEstValide) {
+            // tout est bon  on montre le message de succès et on vide le formulaire
+            if (messageSucces) {
+                messageSucces.classList.add('show');
+                messageSucces.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            formulaire.reset();
+            // on enlève aussi les bordures vertes/rouges, pour repartir sur un formulaire "neutre"
+            document.querySelectorAll('.champ').forEach((champ) => {
+                champ.classList.remove('valid', 'invalid');
+            });
+        } else {
+            // sinon on amène l'utilisateur vers le premier champ en erreur
+            let premierChampInvalide = formulaire.querySelector('.invalid');
+            if (premierChampInvalide) {
+                premierChampInvalide.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    });
+ 
+    function revaliderEnDirect(idChamp, idElement, fonctionDeValidation, evenement) {
+        let champ = document.getElementById(idChamp);
+        let element = document.getElementById(idElement);
+        if (!champ || !element) return;
+ 
+        element.addEventListener(evenement, () => {
+            let dejaVerifie = champ.classList.contains('valid') || champ.classList.contains('invalid');
+            if (dejaVerifie) {
+                definirEtatChamp(idChamp, fonctionDeValidation());
+            }
+        });
+    }
+ 
+    revaliderEnDirect('non-champ', 'fullname', () => document.getElementById('fullname').value.trim().length >= 2, 'input');
+    revaliderEnDirect('champ-email', 'email', () => regexEmail.test(document.getElementById('email').value.trim()), 'input');
+    revaliderEnDirect('champ-phone', 'phone', () => compterChiffres(document.getElementById('phone').value.trim()) >= 8, 'input');
+    revaliderEnDirect('champ-pays', 'country', () => document.getElementById('country').value !== '', 'change');
+    revaliderEnDirect('champ-message', 'message', () => document.getElementById('message').value.trim().length >= 20, 'input');
+ 
+    // pour les boutons radio (le type de participation), dès qu'on en coche un, c'est valide
+    formulaire.querySelectorAll('input[name="type"]').forEach((radio) => {
+        radio.addEventListener('change', () => definirEtatChamp('champ-type', true));
+    });
+}
