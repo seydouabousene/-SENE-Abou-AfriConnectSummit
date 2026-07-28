@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -55,12 +57,43 @@
     <button id="backToTop" title="Retour en haut">↑</button>
     <!-- La section hero avec un titre accrocheur ------------------------------------------------------------------ -->
     <section id="heropro">
+        <svg class="hero-network" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice">
+            <g stroke="#E7A93D" stroke-width="1" fill="none" opacity="0.5">
+                <path d="M180,620 Q 420,420 640,540" stroke-dasharray="6 480" stroke-dashoffset="0">
+                    <animate attributeName="stroke-dashoffset" from="0" to="-1200" dur="9s" repeatCount="indefinite" />
+                </path>
+                <path d="M640,540 Q 800,300 980,180" stroke-dasharray="6 480" stroke-dashoffset="0">
+                    <animate attributeName="stroke-dashoffset" from="0" to="-1200" dur="7s" repeatCount="indefinite" />
+                </path>
+                <path d="M180,620 Q 500,700 980,180" stroke-dasharray="6 480" stroke-dashoffset="0">
+                    <animate attributeName="stroke-dashoffset" from="0" to="-1200" dur="11s" repeatCount="indefinite" />
+                </path>
+                <path d="M300,180 Q 500,320 640,540" stroke-dasharray="6 480" stroke-dashoffset="0">
+                    <animate attributeName="stroke-dashoffset" from="0" to="-1200" dur="8s" repeatCount="indefinite" />
+                </path>
+            </g>
+            <g fill="#E85A3B">
+                <circle cx="180" cy="620" r="5">
+                    <animate attributeName="r" values="4;7;4" dur="2.4s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="640" cy="540" r="5">
+                    <animate attributeName="r" values="4;7;4" dur="3s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="980" cy="180" r="5">
+                    <animate attributeName="r" values="4;7;4" dur="2.7s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="300" cy="180" r="5">
+                    <animate attributeName="r" values="4;7;4" dur="3.3s" repeatCount="indefinite" />
+                </circle>
+            </g>
+        </svg>
         <!-- la div principale pour la section hero ---------------------------------------------------------------- -->
         <div class="container">
             <!-- la date et l'heure--------------------------------------------------------------------------------- -->
             <div class="date">
                 <span class="point"></span>
-                "12 – 14 mars 2026 · Kedougou, Senegal"
+                "12 – 14 Aout 2026 · Kedougou, Senegal"
             </div>
             <!-- mon titre h1 -------------------------------------------------------------------------------------- -->
             <div class="accrocheur">
@@ -85,14 +118,18 @@
             </div>
             <!-- les coonpt a rebours ------------------------------------------------------------------------------ -->
             <div class="contrebour">
-                <!-- jours ----------------------------------------------------------------------------------------- -->
-                <div class="jours" id="jours">00</div>
-                <!-- heure ----------------------------------------------------------------------------------------- -->
-                <div class="heure" id="heure">00</div>
-                <!-- minutes --------------------------------------------------------------------------------------- -->
-                <div class="minutes" id="minutes">00</div>
-                <!-- secondes -------------------------------------------------------------------------------------- -->
-                <div class="secondes" id="secondes">00</div>
+                <div class="jours">
+                    <span id="jours">00</span> <br> jours
+                </div>
+                <div class="heure">
+                    <span id="heure">00</span> <br> Heure
+                </div>
+                <div class="minutes">
+                    <span id="minutes">00</span> <br> minutes
+                </div>
+                <div class="secondes">
+                    <span id="secondes">00</span> <br> Second
+                </div>
             </div>
         </div>
     </section>
@@ -181,7 +218,7 @@
                 </p>
             </div>
         </div>
-    </secction>
+    </section>
     <!-- fin du section whyparticip -------------------------------------------------------------------------------- -->
     <!-- debut du section intervenats vedettes --------------------------------------------------------------------- -->
     <section id="interdette">
@@ -329,7 +366,7 @@
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                         <!-- Instagramme --------------------------------------------------------------------------- -->
-                        <a href="https://www.instagram.com/ton_compte" target="_blank">
+                        <a href="https://www.instagram.com/sey_dou_na" target="_blank">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         <!-- tik tok ------------------------------------------------------------------------------- -->

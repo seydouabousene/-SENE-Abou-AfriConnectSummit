@@ -32,7 +32,7 @@ boutonsRH.forEach((bouton) => {
 
 
 /* ======================== COMPTE À REBOURS EN TEMPS RÉEL========================== */
-let dateConference = new Date('2026-03-12T09:00:00');
+let dateConference = new Date('2026-08-12T09:00:00');
 let elJours = document.getElementById('jours');
 let elHeure = document.getElementById('heure');
 let elMinutes = document.getElementById('minutes');

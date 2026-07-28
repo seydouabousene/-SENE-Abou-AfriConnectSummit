@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -53,6 +53,37 @@
     </header>
     <!-- debut du section liste des coach ---------------------------------------------------------------- -->
     <section id="heropro">
+        <svg class="hero-network" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice">
+            <g stroke="#E7A93D" stroke-width="1" fill="none" opacity="0.5">
+                <path d="M180,620 Q 420,420 640,540" stroke-dasharray="6 480" stroke-dashoffset="0">
+                    <animate attributeName="stroke-dashoffset" from="0" to="-1200" dur="9s" repeatCount="indefinite" />
+                </path>
+                <path d="M640,540 Q 800,300 980,180" stroke-dasharray="6 480" stroke-dashoffset="0">
+                    <animate attributeName="stroke-dashoffset" from="0" to="-1200" dur="7s" repeatCount="indefinite" />
+                </path>
+                <path d="M180,620 Q 500,700 980,180" stroke-dasharray="6 480" stroke-dashoffset="0">
+                    <animate attributeName="stroke-dashoffset" from="0" to="-1200" dur="11s" repeatCount="indefinite" />
+                </path>
+                <path d="M300,180 Q 500,320 640,540" stroke-dasharray="6 480" stroke-dashoffset="0">
+                    <animate attributeName="stroke-dashoffset" from="0" to="-1200" dur="8s" repeatCount="indefinite" />
+                </path>
+            </g>
+            <g fill="#E85A3B">
+                <circle cx="180" cy="620" r="5">
+                    <animate attributeName="r" values="4;7;4" dur="2.4s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="640" cy="540" r="5">
+                    <animate attributeName="r" values="4;7;4" dur="3s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="980" cy="180" r="5">
+                    <animate attributeName="r" values="4;7;4" dur="2.7s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="300" cy="180" r="5">
+                    <animate attributeName="r" values="4;7;4" dur="3.3s" repeatCount="indefinite" />
+                </circle>
+            </g>
+        </svg>
         <div class="container">
             <!-- pour dire j'ai quittée acceuil pour programme --------------------------------------------------------- -->
             <div class="transi">
@@ -107,14 +138,14 @@
                 <div class="coachcard reveal" data-category="business">
                     <!-- photo -------------------------------------------------------------------------------- -->
                     <div class="coachphoto">
-                        <img src="images/igj.jpg" alt="guiirr">
+                        <img src="images/souare.jpg" alt="souare">
                         <span class="coach-tag">Business</span>KM
                     </div>
                     <!-- info -------------------------------------------------------------------------------- -->
                     <div class="coachinfo">
-                        <h3>Aladjie Guirgui</h3>
+                        <h3>Dame PRO</h3>
                         <div class="role">Directeur, Sahel Ventures</div>
-                        <div class="pays">Ghana</div>
+                        <div class="pays">Toubazin</div>
                     </div>
                 </div>
                 <!-- card -------------------------------------------------------------------------------- -->
@@ -149,30 +180,18 @@
                 <div class="coachcard reveal" data-category="ia-tech">
                     <div class="coachphoto">
                         <!-- photo -------------------------------------------------------------------------------- -->
-                        <img src="images/ml.jpg" alt="derr">
+                        <img src="images/ouseynou.jpg" alt="ouseynou">
                         <span class="coach-tag">IA &amp; Tech</span>ZM
                     </div>
                     <!-- info -------------------------------------------------------------------------------- -->
                     <div class="coachinfo">
-                        <h3>Zainab Moyo</h3>
+                        <h3>Ousseynou Ndiaye</h3>
                         <div class="role">CTO, NileTech AI Lab</div>
-                        <div class="pays">Kenya</div>
+                        <div class="pays">Senegalais</div>
                     </div>
                 </div>
                 <!-- card -------------------------------------------------------------------------------- -->
-                <div class="coachcard reveal" data-category="data">
-                    <div class="coachphoto">
-                        <!-- photo -------------------------------------------------------------------------------- -->
-                        <img src="images/tv.jpg" alt="ghik">
-                        <span class="coach-tag">Data</span>OD
-                    </div>
-                    <!-- info -------------------------------------------------------------------------------- -->
-                    <div class="coachinfo">
-                        <h3>Kadiatou Diallo</h3>
-                        <div class="role">Chef de la donnée, Zima Cloud</div>
-                        <div class="pays">Sénégal</div>
-                    </div>
-                </div>
+                
                 <!-- card -------------------------------------------------------------------------------- -->
                 <div class="coachcard reveal" data-category="design">
                     <div class="coachphoto">
@@ -201,6 +220,32 @@
                         <div class="pays">Rwanda</div>
                     </div>
                 </div>
+                <div class="coachcard reveal" data-category="data">
+                    <div class="coachphoto">
+                        <!-- photo -------------------------------------------------------------------------------- -->
+                        <img src="images/manar.jpg" alt="manr">
+                        <span class="coach-tag">Data</span>OD
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>Manar Fall</h3>
+                        <div class="role">Chef de la donnée, Zima Cloud</div>
+                        <div class="pays">Sénégalais</div>
+                    </div>
+                </div>
+                 <div class="coachcard reveal" data-category="data">
+                    <div class="coachphoto">
+                        <!-- photo -------------------------------------------------------------------------------- -->
+                        <img src="images/tv.jpg" alt="ghik">
+                        <span class="coach-tag">Data</span>OD
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>Kadiatou Diallo</h3>
+                        <div class="role">Chef de la donnée, Zima Cloud</div>
+                        <div class="pays">Sénégal</div>
+                    </div>
+                </div>
                 <!-- card -------------------------------------------------------------------------------- -->
                 <div class="coachcard reveal" data-category="design">
                     <div class="coachphoto">
@@ -213,6 +258,58 @@
                         <h3>Yaw Tetteh</h3>
                         <div class="role">Lead produit, Delta Coworking</div>
                         <div class="pays"> Ghana</div>
+                    </div>
+                </div>
+                <div class="coachcard reveal" data-category="design">
+                    <div class="coachphoto">
+                        <!-- photo -------------------------------------------------------------------------------- -->
+                        <img src="images/sdd.jpeg" alt="sdd">
+                        <span class="coach-tag">Design</span>YT
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>John Lakh</h3>
+                        <div class="role">Createur de contenue, Actionnair TIK TOK</div>
+                        <div class="pays"> Senagalais</div>
+                    </div>
+                </div>
+                <div class="coachcard reveal" data-category="design">
+                    <div class="coachphoto">
+                        <!-- photo -------------------------------------------------------------------------------- -->
+                        <img src="images/ii.jpg" alt="ii">
+                        <span class="coach-tag">Data</span>YT
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>You Niebe</h3>
+                        <div class="role">Ingenieur, Actionnair YOUYOU</div>
+                        <div class="pays"> Cap Verdien</div>
+                    </div>
+                </div>
+                <div class="coachcard reveal" data-category="design">
+                    <div class="coachphoto">
+                        <!-- photo -------------------------------------------------------------------------------- -->
+                        <img src="images/dd.jpg" alt="dd">
+                        <span class="coach-tag">Data</span>YT
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>Madjiguene</h3>
+                        <div class="role">Directrice CFC, Actionnair EBOA</div>
+                        <div class="pays"> Fadilate</div>
+                    </div>
+                </div>
+                <div class="coachcard reveal" data-category="ia-tech">
+                    <div class="coachphoto">
+                        <!-- photo -------------------------------------------------------------------------------- -->
+                        <img src="images/ml.jpg" alt="derr">
+                        <span class="coach-tag">IA &amp; Tech</span>ZM
+                    </div>
+                    <!-- info -------------------------------------------------------------------------------- -->
+                    <div class="coachinfo">
+                        <h3>Zainab Moyo</h3>
+                        <div class="role">CTO, NileTech AI Lab</div>
+                        <div class="pays">Kenya</div>
                     </div>
                 </div>
             </div>

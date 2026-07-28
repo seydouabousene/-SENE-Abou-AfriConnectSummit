@@ -482,10 +482,9 @@ a {
 }
 
 .coachphotos {
-    width: 300px;
-    height: 490px;
-    object-fit: cover;
-    /* la photo remplit le cadre sans se déformer */
+    width: 120%;          /* remplit toujours la largeur de la carte, sur tout écran */
+    height: 520px;        /* la hauteur peut rester fixe, c'est la largeur qui posait problème */
+    object-fit: cover;    /* la photo garde ses proportions, recadrée si besoin */
     display: block;
 }
 
@@ -510,6 +509,14 @@ a {
     margin-top: 10px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+}
+
+#interdette {
+    padding: 96px 0;
+}
+
+#interdette .container {
+    max-width: 1350px;   
 }
 
 .ctainterdette {
@@ -579,6 +586,7 @@ a {
     height: 64px;
     padding: 0 28px;
     font-size: 15px;
+    border-color: var(--corail);
 }
 
 .sponsor.bronze {
@@ -674,6 +682,19 @@ footer {
     padding: 160px 0 64px;
     /* 160px en haut pour laisser la place à la navbar fixe */
     border-bottom: 1px solid var(--ligne);
+    position: relative;
+    overflow: hidden;
+}
+#heropro .container {
+    position: relative;
+    z-index: 1;
+}
+.hero-network {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.55;
+    pointer-events: none;
 }
 
 #heropro h1 {
@@ -1413,5 +1434,8 @@ footer {
 
     .footerpri {
         flex-direction: column;
+    }
+   .coachphotos {
+        height: 620px;  
     }
 }
